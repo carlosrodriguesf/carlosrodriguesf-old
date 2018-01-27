@@ -1,0 +1,39 @@
+main > section {
+    margin: auto;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+main > section hr {
+    max-width: 100px;
+}
+
+main > section h3 {
+    text-align: center;
+}
+
+main > section div.row > div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/*Skill Groups*/
+div.skill-group {
+    min-width: 300px;
+}
+
+div.skill-group label {
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+}
+
+/*Contact*/
+main .form-control {
+    margin: 5px 0;
+}
+
+main section.contact div.button-container{
+    text-align: right;
+}

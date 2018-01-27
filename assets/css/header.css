@@ -1,0 +1,124 @@
+header {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+header img.header-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: blur(10px);
+    max-width: 100%;
+}
+
+/*apply when width > height*/
+header img.header-background.invert {
+    max-width: none;
+    max-height: 100%;
+}
+
+header div.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header div.content div.profile-info {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+header div.content div.profile-info > * {
+    text-shadow: 0 0 1px black;
+}
+
+header div.content div.profile-info h1 {
+    font-size: 80pt;
+}
+
+header div.content nav.social-links {
+    width: 100%;
+    background-color: rgba(30, 30, 30, .9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header div.content nav.social-links > * {
+    color: whitesmoke;
+    font-size: 3rem;
+    margin: 30px;
+    transition: 100ms linear all;
+    text-shadow: 0 0 1px white;
+}
+
+header div.content nav.social-links > *:hover {
+    font-size: 4rem;
+}
+
+header div.content div.scroll-down {
+    width: 100%;
+    text-align: center;
+    background-color: rgba(30, 30, 30, .9);
+    color: whitesmoke;
+    cursor: pointer;
+    height: 60px;
+}
+
+header div.content div.scroll-down > i {
+    animation-name: scroll-down-shake;
+    animation-duration: 1500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+header div.content div.scroll-down * {
+    font-size: 4rem;
+}
+
+@media screen and (max-width: 768px) {
+    header img.header-background {
+        filter: blur(5px);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    header div.content div.profile-info h1 {
+        font-size: 40pt;
+    }
+
+    header div.content div.profile-info h3 {
+        font-size: 15pt;
+    }
+
+    header div.content nav.social-links > * {
+        font-size: 2rem;
+        margin: 30px 15px;
+    }
+}
+
+@keyframes scroll-down-shake {
+    0% {
+        transform: translateY(-5px);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(-5px);
+    }
+}
